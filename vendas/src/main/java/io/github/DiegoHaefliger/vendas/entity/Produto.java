@@ -9,50 +9,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Entity
 @Table(name = "produto")
 public class Produto {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
-	
-	private String descricao;
-	
-	@Column(precision = 20, scale = 2)
-	private BigDecimal preco;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
-	public Produto() {
-	}
+    private String descricao;
 
-	public Produto(Integer id, String descricao, BigDecimal preco) {
-		this.id = id;
-		this.descricao = descricao;
-		this.preco = preco;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public BigDecimal getPreco() {
-		return preco;
-	}
-
-	public void setPreco(BigDecimal preco) {
-		this.preco = preco;
-	}
+    @Column(precision = 20, scale = 2)
+    private BigDecimal preco;
 
 }

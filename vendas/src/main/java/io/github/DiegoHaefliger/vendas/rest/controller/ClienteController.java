@@ -1,4 +1,4 @@
-package io.github.DiegoHaefliger.vendas.controller;
+package io.github.DiegoHaefliger.vendas.rest.controller;
 
 import java.util.List;
 
